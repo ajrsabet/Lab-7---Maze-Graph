@@ -19,6 +19,7 @@ public class GamePlay {
 
         while (gameOver == false) {
             console.printMaze(maze);
+            System.out.println("X: " + posX + " Y: " + posY);
             System.out.println("Controls: up(w), left(d), down(s), right(a) + ENTER");
             System.out.println("Other options: hint(h), pause(p) + ENTER");
             char chars[] = {'w', 's', 'a', 'd', 'h', 'p'};
@@ -54,7 +55,7 @@ public class GamePlay {
                             steps++;
                         }
                     }
-                    case 'h' -> {mazeGen.bfs(maze, posX, posY);}         
+                    case 'h' -> {mazeGen.bfs(maze, posY, posX);}         
                     case 'p' -> {gameOver = true;}         
                     default -> {}
                 }   

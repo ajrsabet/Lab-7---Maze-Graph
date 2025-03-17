@@ -80,14 +80,12 @@ public class MazeGenerator {
                     if (newX == rows - 1 && newY == cols - 2) {
                         System.out.println("Shortest path length: " + distance[newX][newY]);
                         markPath(maze, distance, newX, newY, startX, startY);
-                        break; // return distance;
+                        return; // return distance;
                     }
                 }
             }
         }
-    
         System.out.println("No path found.");
-        // return distance;
     }
     
     private static void markPath(int[][] maze, int[][] distance, int endX, int endY, int startX, int startY) {
